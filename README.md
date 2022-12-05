@@ -46,6 +46,13 @@ conda activate cloob
 export PYTHONPATH="$PYTHONPATH:$PWD/src"
 ```
 
+Alternatively, after creating environment using `environment.yml` and activating it, you can install CLOOB as a module.
+
+```
+# Install CLOOB as a module
+pip install git+https://github.com/CupCodeIr/cloob.git
+```
+
 ## Data
 For pre-training we use the two datasets supported by OpenCLIP, namely Conceptual Captions and YFCC.
 
@@ -108,6 +115,14 @@ python -u src/training/main.py \
 ### Zeroshot evaluation of downstream tasks
 We provide a [Jupyter notebook](src/notebooks/zeroshot.ipynb) to perform zeroshot evaluation with a trained model.
 
+### Import CLOOB as a module
+If you have already installed CLOOB as a module, you can import it as follow.
+
+```
+import cloob.clip.clip as clip
+from cloob.clip.clip import _transform
+from cloob.clip.model import CLIPGeneral
+```
 
 ## LICENSE
 MIT LICENSE
